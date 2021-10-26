@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;1,300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+.pricing {
+  min-height: 100vh;
+  background-color: red;
+  padding: 100px 0;
+  --color-1: #5b61f2;
+  --color-2: #ffbe00;
+  --color-3: #ff5081;
+}
+.container {
+  max-width: 1170px;
+  margin: auto;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.pricing-table {
+  background-color: #ffffff;
+  width: calc((100% / 3) - 30px);
+  margin: 0 15px;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.pricing-table-header {
+  padding: 15px 30px;
+}
+.style-1 .pricing-table-header {
+  background-color: #5b61f2;
+}
+.style-2 .pricing-table-header {
+  background-color: #ffbe00;
+}
+.style-3 .pricing-table-header {
+  background-color: #ff5081;
+}
+.pricing-table-header h3 {
+  font-weight: 600;
+  text-align: center;
+}
+.pricing-table-price {
+  background-color: coral;
+  padding: 40px 0;
+}
+.pricing-table-price .monthly-price {
+  display: flex;
+  padding: 0 30px;
+  justify-content: center;
+}
+.pricing-table-price .monthly-price .amount {
+  font-size: 85px;
+  font-weight: 700;
+  color: #555555;
+  line-height: 0.9;
+}
+.pricing-table-price .monthly-price .currently {
+  font-size: 25px;
+  font-weight: 700;
+  color: #555555;
+  line-height: 1;
+}
+.pricing-table-body {
+}
+.pricing-table-footer {
+}
