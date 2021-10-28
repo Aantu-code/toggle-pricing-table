@@ -25,6 +25,59 @@ ul {
 a {
   text-decoration: none;
 }
+.switch-table {
+  width: 100%;
+  padding: 0 15px;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.switch-table .text-monthly,
+.switch-table .text-yearly {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+.switch-table .custom-switch {
+  width: 100px;
+  height: 40px;
+  background-color: rgb(121, 46, 192);
+  border-radius: 20px;
+  position: relative;
+  vertical-align: middle;
+  margin: 0 10px;
+}
+.pricing .switch-table .custom-switch span {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: #ffffff;
+  position: absolute;
+  border-radius: 50%;
+  left: 6px;
+  top: 8px;
+  cursor: pointer;
+  transition: left 0.5s ease;
+}
+/* .pricing .switch-table .toggle-switch {
+  position: absolute;
+  left: -9999px;
+} */
+.toggle-switch {
+  opacity: 0;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 0px;
+  left: 0px;
+  border-radius: 50%;
+}
+.pricing .pricing-main.active .switch-table .custom-switch span {
+  left: calc(100% - 34px);
+}
+.switch-table div,
+.custom-switch {
+  display: inline-block;
+}
 .pricing-table {
   background-color: #ffffff;
   width: calc((100% / 3) - 30px);
