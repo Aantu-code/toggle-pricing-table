@@ -1,0 +1,12 @@
+@media screen and (max-width: 991px) {
+  .pricing .pricing-table {
+    width: calc(50% - 30px);
+    margin-bottom: 35px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .pricing .pricing-table {
+    width: calc(51% - 35px);
+    margin-bottom: 35px;
+  }
+}

@@ -10,7 +10,7 @@ body {
 .pricing {
   min-height: 100vh;
   background-color: rgb(41, 38, 38);
-  padding: 100px 0;
+  padding: 50px 0;
   --color-1: #5b61f2;
   --color-2: #ffbe00;
   --color-3: #ff5081;
@@ -36,6 +36,7 @@ a {
   color: #ffffff;
   text-transform: uppercase;
   font-size: 18px;
+  transition: color 0.4s ease;
 }
 .switch-table .custom-switch {
   width: 100px;
@@ -74,6 +75,14 @@ a {
 .pricing .pricing-main.active .switch-table .custom-switch span {
   left: calc(100% - 34px);
 }
+.pricing-main:not(.active) .switch-table .text-monthly,
+.pricing-main.active .switch-table .text-yearly {
+  color: #5b61f2;
+}
+.pricing-main.active .yearly-price,
+.pricing-main.active .monthly-price {
+  transform: translateX(-100%);
+}
 .switch-table div,
 .custom-switch {
   display: inline-block;
@@ -88,6 +97,7 @@ a {
 .row {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .pricing-table-header {
   padding: 15px 30px;
@@ -126,18 +136,26 @@ a {
 }
 .pricing-table-price {
   padding: 40px 0;
+  display: flex;
 }
+
+.pricing-table-price .yearly-price,
 .pricing-table-price .monthly-price {
   display: flex;
   padding: 0 30px;
   justify-content: center;
+  width: 100%;
+  flex-shrink: 0;
+  transition: all 0.5s ease;
 }
+.pricing-table-price .yearly-price .amount,
 .pricing-table-price .monthly-price .amount {
   font-size: 85px;
   font-weight: 700;
   color: #555555;
   line-height: 0.9;
 }
+.pricing-table-price .yearly-price .currently,
 .pricing-table-price .monthly-price .currently {
   font-size: 25px;
   font-weight: 700;
@@ -180,4 +198,21 @@ a {
 }
 .pricing-table-body ul li i.fa-times {
   color: #ffffff;
+}
+.monthly-feature,
+.yearly-feature {
+  display: none;
+}
+.pricing-main:not(.active) .monthly-feature,
+.pricing-main.active .yearly-feature {
+  display: block;
+  animation: fadeIn 0.5s ease forwards;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
